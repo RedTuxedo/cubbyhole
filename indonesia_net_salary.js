@@ -1,6 +1,6 @@
 function getNetSalary(gross_salary) {
   /*
-  This function simply calculates the net salary from given gross salary (monthly)
+  This function calculates the net salary from given gross salary (monthly)
   Indonesia tax structure:
   Non-taxable income (PTKP) = IDR 54M
   Taxable income = Annual income - Non-taxable income
