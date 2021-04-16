@@ -15,7 +15,7 @@ function getNetSalary(gross_salary) {
   Monthly salary of IDR 10M:
   Annual income		: IDR 120M --> Taxable income	: IDR 66M
   -------------------------------------------------------------
-  | Tax Level           	| Applicable Tax  | Remaining Amount |
+  | Tax Level		| Applicable Tax  | Remaining Amount |
   -------------------------------------------------------------
   | First IDR 50M	|    50.000.000   |    16.000.000    |
   | IDR 50M - IDR 250M	|    16.000.000   |             0    |
@@ -27,7 +27,7 @@ function getNetSalary(gross_salary) {
   Monthly salary of IDR 40M:
   Annual income		: IDR 480M --> Taxable income	: IDR 426M
   -------------------------------------------------------------
-  | Tax Level           	| Applicable Tax  | Remaining Amount |
+  | Tax Level		| Applicable Tax  | Remaining Amount |
   -------------------------------------------------------------
   | First IDR 50M	|    50.000.000   |   376.000.000    |
   | IDR 50M - IDR 250M	|   200.000.000   |   176.000.000    |
@@ -39,7 +39,7 @@ function getNetSalary(gross_salary) {
   Monthly salary of IDR 50M:
   Annual income		: IDR 600M --> Taxable income	: IDR 546M
   -------------------------------------------------------------
-  | Tax Level           	| Applicable Tax  | Remaining Amount |
+  | Tax Level		| Applicable Tax  | Remaining Amount |
   -------------------------------------------------------------
   | First IDR 50M	|    50.000.000   |   496.000.000    |
   | IDR 50M - IDR 250M	|   200.000.000   |   296.000.000    |
