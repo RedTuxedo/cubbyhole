@@ -1,6 +1,26 @@
 function getNetSalary(gross_salary) {
   /*
-  This function simply calculates
+  This function simply calculates the net salary from given gross salary (monthly)
+  Indonesia tax structure:
+  Taxed income = Annual income - 54M IDR
+  
+  Taxed income tax policy:
+  First IDR 50M		:  5%
+  IDR 50M - IDR 250M	: 15%
+  IDR 250M - IDR 500M	: 25%
+  IDR 500M above	: 30%
+
+  Example:
+  With monthly salary of IDR 40M:
+  Annual income		: IDR 480M
+  Taxable income	: IDR 426M
+  
+  With IDR 426M in calculation
+  First IDR 50M		:  5% of IDR 50M
+  IDR 50M - IDR 250M	: 15% of IDR 200M
+  IDR 250M - IDR 500M	: 25% of IDR 176M
+  IDR 500M above	: Not applicable
+  
   */
   annual_salary = 12 * gross_salary;
 
