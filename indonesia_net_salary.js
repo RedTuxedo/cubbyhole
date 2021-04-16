@@ -2,24 +2,50 @@ function getNetSalary(gross_salary) {
   /*
   This function simply calculates the net salary from given gross salary (monthly)
   Indonesia tax structure:
-  Taxed income = Annual income - 54M IDR
+  Non-taxable income (PTKP) = IDR 54M
+  Taxable income = Annual income - Non-taxable income
   
-  Taxed income tax policy:
+  Taxable income tax policy:
   First IDR 50M		:  5%
   IDR 50M - IDR 250M	: 15%
   IDR 250M - IDR 500M	: 25%
   IDR 500M above	: 30%
 
-  Example:
-  With monthly salary of IDR 40M:
-  Annual income		: IDR 480M
-  Taxable income	: IDR 426M
-  
-  With IDR 426M in calculation
-  First IDR 50M		:  5% of IDR 50M
-  IDR 50M - IDR 250M	: 15% of IDR 200M
-  IDR 250M - IDR 500M	: 25% of IDR 176M
-  IDR 500M above	: Not applicable
+  Example 1:
+  Monthly salary of IDR 10M:
+  Annual income		: IDR 120M --> Taxable income	: IDR 66M
+  -------------------------------------------------------------
+  | Tax Level           	| Applicable Tax  | Remaining Amount |
+  -------------------------------------------------------------
+  | First IDR 50M	|    50.000.000   |    16.000.000    |
+  | IDR 50M - IDR 250M	|    16.000.000   |             0    |
+  | IDR 250M - IDR 500M	|             0   |             0    |
+  | IDR 500M above	|             0   |             0    |
+  -------------------------------------------------------------
+
+  Example 2:
+  Monthly salary of IDR 40M:
+  Annual income		: IDR 480M --> Taxable income	: IDR 426M
+  -------------------------------------------------------------
+  | Tax Level           	| Applicable Tax  | Remaining Amount |
+  -------------------------------------------------------------
+  | First IDR 50M	|    50.000.000   |   376.000.000    |
+  | IDR 50M - IDR 250M	|   200.000.000   |   176.000.000    |
+  | IDR 250M - IDR 500M	|   176.000.000   |             0    |
+  | IDR 500M above	|             0   |             0    |
+  -------------------------------------------------------------
+
+  Example 3:
+  Monthly salary of IDR 50M:
+  Annual income		: IDR 600M --> Taxable income	: IDR 546M
+  -------------------------------------------------------------
+  | Tax Level           	| Applicable Tax  | Remaining Amount |
+  -------------------------------------------------------------
+  | First IDR 50M	|    50.000.000   |   496.000.000    |
+  | IDR 50M - IDR 250M	|   200.000.000   |   296.000.000    |
+  | IDR 250M - IDR 500M	|   250.000.000   |    46.000.000    |
+  | IDR 500M above	|    46.000.000   |             0    |
+  -------------------------------------------------------------
   
   */
   annual_salary = 12 * gross_salary;
